@@ -19,6 +19,8 @@ Route::get('/',[HomeController::class,"index"]);
 
 Route::get('/users',[AdminController::class,"user"]);
 
+Route::get('/CreateHouse',[AdminController::class,"CreateHouse"]);
+
 Route::post('/uploadhouse',[AdminController::class,"upload"]);
 
 Route::get('/deleteuser/{id}',[AdminController::class,"deleteuser"]);

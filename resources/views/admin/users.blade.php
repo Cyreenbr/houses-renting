@@ -5,20 +5,20 @@
   </head>
   <body>
   <div class="container-scroller">
-       @include("admin.navbar")
+       @include("admin.sidebar")
         <!-- partial -->
-
+       @include("admin.navbar")
         <div style="padding: 100px">
-            <table>
+            <table class="table table-success table-striped " style="width:900px;">
 
-                <tr>
-                   <th>Name</th>
-                   <th>Email</th>
-                   <th>Action</th>
-                </tr>
+                <thead align=center>
+                   <th >Name</th>
+                   <th >Email</th>
+                   <th >Action</th>
+                </thead>
 
                 @foreach ($data as $data)
-                <tr>
+                <tr align=center >
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
                 @if($data->usertype=="0")

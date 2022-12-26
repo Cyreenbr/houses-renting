@@ -3,6 +3,7 @@
 use Laravel\Jetstream\Features;
 use Laravel\Jetstream\Http\Middleware\AuthenticateSession;
 
+
 return [
 
     /*
@@ -15,6 +16,7 @@ return [
     | during installation and will not need to be changed after that.
     |
     */
+
 
     'stack' => 'livewire',
 
@@ -79,3 +81,4 @@ return [
     'profile_photo_disk' => 'public',
 
 ];
+

@@ -25,6 +25,10 @@ class AdminController extends Controller
         return view("admin.ttMaisons",compact("data"));
     }
 
+    public function CreateHouse(){
+        return view("admin.CreateHouse");
+    }
+
     public function updateview($id){
 
         $data = house::find($id);
