@@ -5,13 +5,35 @@
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu"></span>
             </button>
+
+
+ @if ( url()->current() == 'http://127.0.0.1:8000/users')
+   
+
+            <!-- Search User-->
             <ul class="navbar-nav w-100">
               <li class="nav-item w-100">
-                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                  <input type="text" class="form-control" placeholder="Search products">
+                <form action="{{url('/searchUser')}}" method="get" class="nav-link mt-2 mt-md-0  d-lg-flex search" >
+                  <input type="text" class="form-control" name="searchUser" placeholder="Recherche d'un utilisateur" style="color:white;">
                 </form>
               </li>
             </ul>
+            <!-- End search User-->
+
+@elseif ( url()->current() == 'http://127.0.0.1:8000/ttMaisons' )
+
+ <!-- Search House-->
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form action="{{url('/searchHouse')}}" method="get" class="nav-link mt-2 mt-md-0  d-lg-flex search" >
+                  <input type="text" class="form-control" name="searchHouse" placeholder="Recherche d'un immobilier" style="color:white;">
+                </form>
+              </li>
+            </ul>
+  <!-- End search House-->
+
+@endif           
+
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item  d-none d-lg-block">
                 <a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="{{url('/CreateHouse')}}">+ Create New House</a>

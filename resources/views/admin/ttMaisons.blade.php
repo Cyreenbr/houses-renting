@@ -30,7 +30,7 @@
                 <tr align="center">
                 <td>{{$data->description}}</td>
                 <td>{{$data->categorie}}</td>
-                <td>{{$data->adress}}</td>
+                <td>{{$data->adresse}}</td>
                 <td>{{$data->surface}}</td>
                 <td>{{$data->prix}}</td>
                 <td><img src="/houseimage/{{$data->image}}"></td>

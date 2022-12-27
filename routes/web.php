@@ -21,17 +21,23 @@ Route::get('/users',[AdminController::class,"user"]);
 
 Route::get('/CreateHouse',[AdminController::class,"CreateHouse"]);
 
+Route::get('/byCategory',[HomeController::class,"byCategory"]);
+
 Route::post('/uploadhouse',[AdminController::class,"upload"]);
 
 Route::get('/deleteuser/{id}',[AdminController::class,"deleteuser"]);
 
 Route::get('/ttMaisons',[AdminController::class,"ttMaisons"]);
 
+Route::get('/searchUser',[AdminController::class,"searchUser"]);
+
 Route::get('/deletehouse/{id}',[AdminController::class,"deletehouse"]);
 
 Route::get('/updateview/{id}',[AdminController::class,"updateview"]);
 
 Route::post('/update/{id}',[AdminController::class,"update"]);
+
+Route::get('/searchHouse',[AdminController::class,"searchHouse"]);
 
 Route::get('/redirects',[HomeController::class,"redirects"]);
 

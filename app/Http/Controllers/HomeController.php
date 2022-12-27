@@ -15,6 +15,13 @@ class HomeController extends Controller
         return view("home",compact("data"));
     }
 
+    public function byCategory(){
+        $house = "maison" ;
+        $data = house::all();
+        return view("byCategory",compact("data"));
+
+    }
+
     public function redirects(){
 
        $data =  house::all();

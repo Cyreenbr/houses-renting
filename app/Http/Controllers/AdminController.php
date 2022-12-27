@@ -14,6 +14,12 @@ class AdminController extends Controller
         return view("admin.users",compact("data"));
     }
 
+    public function searchUser(Request $request){
+        $search = $request->searchUser;
+        $data = user::where('name', 'Like', '%' .$search. '%')->get();
+        return view("admin.users",compact("data"));
+    }
+
     public function deleteuser($id){
         $data = user::find($id);
         $data->delete();
@@ -34,6 +40,12 @@ class AdminController extends Controller
         $data = house::find($id);
         
         return view("admin.updateview",compact("data"));
+    }
+
+    public function searchHouse(Request $request){
+        $search = $request->searchHouse;
+        $data = house::where('categorie', 'Like', '%' .$search. '%')->orWhere('description', 'Like', '%' .$search. '%')->get();
+        return view("admin.ttMaisons",compact("data"));
     }
 
     public function update(Request $request,$id){

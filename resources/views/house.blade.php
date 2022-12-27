@@ -1,3 +1,8 @@
+   <head>
+     @include("head")
+  </head>
+  
+  
   <!-- ***** Menu Area Starts ***** -->
     <section class="section" id="menu">
         <div class="container">
@@ -18,7 +23,6 @@
                     
                     <div class="item">
                         <div style="background-image: url('/houseimage/{{$data->image}}')" class='card'>
-                            <div class="prix"><h6>{{$data->prix}}</h6></div>
                             <div class='info'>
                               <h1 class='title'>{{$data->categorie}}</h1>
                               <p class='description'>{{$data->description}}</p>
@@ -28,11 +32,13 @@
                             </div>
                         </div>
                     </div>
-
+                    
                 @endforeach
 
                 </div>
             </div>
         </div>
     </section>
+         @include("homescript")
+
     <!-- ***** Menu Area Ends ***** -->
