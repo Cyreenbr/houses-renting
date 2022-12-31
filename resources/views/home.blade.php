@@ -44,7 +44,7 @@
                             <h4>Rent House</h4>
                             <h6>THE BEST EXPERIENCE</h6>
                             <div class="main-white-button scroll-to-section">
-                                <a href="#reservation">LogIn</a>
+                                <a href="">LogIn</a>
                             </div>
                         </div>
                     </div>

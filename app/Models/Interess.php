@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model
+class Interess extends Model
 {
     use HasFactory;
-    public $timestamps = true;
 
-
+    public function house()
+    {
+        return $this->hasOne(House::class);
+    }
 }

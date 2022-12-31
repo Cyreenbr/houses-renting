@@ -5,10 +5,10 @@
                     <div class="contact-form">
                           <div class="row">
                            
-                             <form id="contact" action="{{url('/uploadhouse')}}" method="POST"  enctype="multipart/form-data">
+                             <form id="contact" action="{{url('/uploadinteresse')}}" method="POST"  enctype="multipart/form-data">
                               @csrf
                                <div class="col-lg-12">
-                                <h4>Faire une Annonce</h4>
+                                <h4>Interessé</h4>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                               <fieldset>
@@ -38,15 +38,6 @@
                                 <textarea name="description" rows="6" id="description" placeholder="Description" required></textarea>
                               </fieldset>
                             </div>
-
-                            <div class="col-lg-12">
-
-                               <div>
-                              <label>Image</label>
-                             <input class="form-control" type="file" name="image" required>
-                              </div>
-
-                               </div>
                             <div class="col-lg-12">
                               <fieldset>
                                 <button type="submit" id="form-submit" class="main-button-icon" value="Save">Ajouter</button>

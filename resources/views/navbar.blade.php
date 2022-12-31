@@ -1,15 +1,14 @@
 <nav class="main-nav">
                         <!-- *** Logo Start *** -->
                         <a href="" class="logo">
-                            <img src="" width=120 height=70 align="klassy cafe html template">
+                            <img src="/houseimage/location_logo.png" width=100 height=70 align="klassy cafe html template">
                         </a>
                         <!-- *** Logo End *** -->
                         <!-- *** Menu Start *** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
-                           	
-                        
+                          
                             <li class="submenu">
                                 <a href="javascript:;">Categories</a>
                                 <ul>
@@ -29,6 +28,9 @@
  
                                           </x-app-layout>
                                          </li>
+                                           <li class="nav-item  d-none d-lg-block">
+                                               <a class="nav-link btn btn-success create-new-button" aria-expanded="false" href="{{url('/createAnnonce')}}">+ créer une nouvelle annonce</a>
+                                           </li>
                                         @else
                                          <li>
                                           <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
@@ -39,9 +41,8 @@
                                           </li>
                                         @endif
                                       @endauth
-                                </div>
+                                </div>           
                               @endif
-                            </li>
                         </ul>        
                     
                         <!-- *** Menu End *** -->

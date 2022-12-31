@@ -21,7 +21,13 @@ Route::get('/users',[AdminController::class,"user"]);
 
 Route::get('/CreateHouse',[AdminController::class,"CreateHouse"]);
 
-Route::get('/byCategory',[HomeController::class,"byCategory"]);
+Route::get('/categoryHouse',[HomeController::class,"CategoryHouse"]);
+
+Route::get('/categoryApartment',[HomeController::class,"CategoryApartment"]);
+
+Route::get('/categoryStudio',[HomeController::class,"CategoryStudio"]);
+
+Route::get('/categoryVilla',[HomeController::class,"CategoryVilla"]);
 
 Route::post('/uploadhouse',[AdminController::class,"upload"]);
 
@@ -40,6 +46,13 @@ Route::post('/update/{id}',[AdminController::class,"update"]);
 Route::get('/searchHouse',[AdminController::class,"searchHouse"]);
 
 Route::get('/redirects',[HomeController::class,"redirects"]);
+
+Route::get('/createAnnonce',[HomeController::class,"CreateAnnonce"]);
+
+Route::get('/interesse/{id}',[HomeController::class,"Interesse"]);
+
+Route::post('/uploadinteresse',[HomeController::class,"upload"]);
+
 
 Route::middleware([
     'auth:sanctum',

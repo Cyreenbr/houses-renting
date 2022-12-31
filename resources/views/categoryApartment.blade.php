@@ -34,21 +34,22 @@
    <div class="container" >
    <div class="row mb-2">
      @foreach ($data as $data)
-     @if ($data->categorie == 'maison')      
-       <div class="card mb-3" style="max-width: 540px; margin-top:100px">
-           <div class="row g-0">
-             <div class="col-md-4">
-               <img src="/houseimage/{{$data->image}}" class="img-fluid rounded-start" alt="...">
-             </div>
-             <div class="col-md-8">
-                 <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                 </div>
-              </div>
-           </div>
-       </div>
+     @if ($data->categorie == "apartement")      
+        <div class="card mb-3" style="widht:100px;margin-top:20px" >
+    <img src="/houseimage/{{$data->image}}"  class="card-img-top" alt="..." style="height:250px">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text" >{{$data->description}}</p>
+    <p class="card-text" >{{$data->adresse}}</p>
+   <p class="card-text" >{{$data->surface}}</p>
+       <p class="card-text" >{{$data->prix}}</p>
+    <p class="card-text"><small class="text-muted">{{$data->updated_at}}</small></p>
+
+        <button><span class="bi bi-star"></span>Intéressé</button>
+
+    </div>
+    </div>
+    
        @endif
      @endforeach
    </div>

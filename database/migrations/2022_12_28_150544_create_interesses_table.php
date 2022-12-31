@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-
-        Schema::create('houses', function (Blueprint $table) {
+        Schema::create('interesses', function (Blueprint $table) {
             $table->id();
-            $table->string('description')->nullable();
-            $table->string('categorie')->nullable();
+            $table->unsignedBigInteger('house_id');
+            $table->foreign('house_id')->references('id')->on('houses');
+            $table->string('nom')->nullable();
+            $table->string('prenom')->nullable();
             $table->string('adresse')->nullable();
-            $table->string('surface')->nullable();
-            $table->string('prix')->nullable();
-            $table->string('image')->nullable();
+            $table->string('numero')->nullable();
+            $table->date('date_debut')->nullable();
+            $table->date('date_fin')->nullable();
             $table->timestamps();
-        
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('houses');
+        Schema::dropIfExists('interesses');
     }
 };
