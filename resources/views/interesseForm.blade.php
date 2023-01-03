@@ -12,32 +12,49 @@
                             </div>
                             <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                                <input name="adress" type="text" id="adress" placeholder="Adresse" required>
+                                <input name="house_id" type="text" id="house_id" value="{{$id}}" >
                               </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                              <input name="surface" type="text" id="surface"  placeholder="surface" required>
+                              <input name="nom" type="text" id="nom"  placeholder="Nom" required>
                             </fieldset>
                             </div>
                             
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                             <input name="prix" type="text" id="prix" placeholder="Prix" required>
+                             <input name="prenom" type="text" id="prenom" placeholder="Prenom" required>
                               </fieldset>
                             </div>
                           
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                             <input name="categorie" type="text" id="categorie" placeholder="Catégorie" required>
+                             <input name="numero" type="text" id="numero" placeholder="Numéro de Tel" required>
                               </fieldset>
                             </div>
 
-                             <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="description" rows="6" id="description" placeholder="Description" required></textarea>
-                              </fieldset>
+                            <div class="col-lg-6">
+                                <div id="filterDate2">    
+                                  <div class="input-group date" data-date-format="yyyy-mm-dd">
+                                    <input  name="date_debut" id="date" type="date" class="form-control" placeholder="Date début">
+                                    <div class="input-group-addon" >
+                                      <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                  </div>
+                                </div>   
                             </div>
+
+                            <div class="col-lg-6">
+                                <div id="filterDate2">    
+                                  <div class="input-group date" data-date-format="yyyy-mm-dd">
+                                    <input  name="date_fin" id="date" type="date" class="form-control" placeholder="Date fin">
+                                    <div class="input-group-addon" >
+                                      <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                  </div>
+                                </div>   
+                            </div>
+
                             <div class="col-lg-12">
                               <fieldset>
                                 <button type="submit" id="form-submit" class="main-button-icon" value="Save">Ajouter</button>

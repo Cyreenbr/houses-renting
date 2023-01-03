@@ -45,7 +45,7 @@
        <p class="card-text" >{{$data->prix}}</p>
     <p class="card-text"><small class="text-muted">{{$data->updated_at}}</small></p>
 
-        <button><a href="{{url('/formInteresse',$data->id)}}"></span>Intéressé</a></button>
+        <button><a href="{{url('/interesse',$data->id)}}"></span>Intéressé</a></button>
 
     </div>
     </div>

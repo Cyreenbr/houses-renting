@@ -51,6 +51,8 @@ Route::get('/createAnnonce',[HomeController::class,"CreateAnnonce"]);
 
 Route::get('/interesse/{id}',[HomeController::class,"Interesse"]);
 
+Route::get('/interesseForm/{id}',[HomeController::class,"InteresseForm"]);
+
 Route::post('/uploadinteresse',[HomeController::class,"upload"]);
 
 

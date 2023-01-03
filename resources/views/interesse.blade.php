@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
 
+    <base href="/public">
      @include("head")
-
-    
-<body>
+      
+</head>   
+ <body>
     
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -20,15 +22,10 @@
   
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                 
+       
                  @include("navbar")
 
-                </div>
-            </div>
-        </div>
+      
     </header>
     <!-- *** Header Area End *** -->
   

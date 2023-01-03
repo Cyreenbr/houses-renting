@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('interesses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('house_id');
+            $table->unsignedBigInteger('house_id')->default(1);
             $table->foreign('house_id')->references('id')->on('houses');
             $table->string('nom')->nullable();
             $table->string('prenom')->nullable();
-            $table->string('adresse')->nullable();
             $table->string('numero')->nullable();
             $table->date('date_debut')->nullable();
             $table->date('date_fin')->nullable();

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\House;
+use App\Models\Interess;
+
 
 class HomeController extends Controller
 {
@@ -43,25 +45,23 @@ class HomeController extends Controller
         return view("createAnnonce");
     }
 
-    public function Interesse(){
-        return view("interesse");
+    public function Interesse($id){
+        return view("interesse",compact("id"));
+    }
+
+    public function InteresseForm($id){
+        return view("interesse",compact("id"));
     }
 
     public function upload(Request $request){
-        $data = new house;
+        $data = new Interess;
 
-        $image = $request->image;
-
-        $imagename = time().'.'.$image->getClientOriginalExtension();
-
-        $request->image->move('houseimage',$imagename);
-
-        $data->image = $imagename;
-        $data->description = $request->description;
-        $data->adresse = $request->adress;
-        $data->surface = $request->surface;
-        $data->prix = $request->prix;
-        $data->categorie = $request->categorie;
+        $data->house_id = $request->house_id;
+        $data->nom = $request->nom;
+        $data->prenom = $request->prenom;
+        $data->numero = $request->numero;
+        $data->date_debut = $request->date_debut;
+        $data->date_fin = $request->date_fin;
         
         $data->save();
 
@@ -76,7 +76,7 @@ class HomeController extends Controller
        if( $usertype == '1') {
                return view("admin.adminhome") ;
        }else{
-                return view("home",compact('data'));
+               return view("home",compact('data'));
        }
     }
 }
