@@ -1,0 +1,62 @@
+version: "3.8"
+services:
+  allocation_app:
+    container_name: allocation_app
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    expose:
+      - 9000
+    volumes:
+      - .:/usr/src/app
+      - ./public:/usr/src/app/public
+    depends_on:
+      - allocation_db
+    networks:
+      - app_network
+
+  allocation_db:
+    container_name: allocation_db
+    image: mysql:8.0.20
+    restart: always
+    volumes:
+      - ./storage/db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: allocation_house
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: user
+    networks:
+      - app_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+    # 8080 is the host port and 80 is the docker port
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY:1
+      - PMA_HOST:mysql
+      - MYSQL_USERNAME:root
+      - MYSQL_ROOT_PASSWORD:""
+    depends_on:
+      - allocation_db
+    networks:
+     # define your network where all containers are connected to each other
+      - app_network
+   
+  allocation_redis:
+    container_name: allocation_redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

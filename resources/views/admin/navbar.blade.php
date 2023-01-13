@@ -136,7 +136,7 @@
  
               </x-app-layout>
               </li>
-              <li class="nav-item dropdown">
+              <!--<li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                   <div class="navbar-profile">
                     <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
@@ -171,7 +171,7 @@
                   <div class="dropdown-divider"></div>
                   <p class="p-3 mb-0 text-center">Advanced settings</p>
                 </div>
-              </li>
+              </li> -->
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
               <span class="mdi mdi-format-line-spacing"></span>

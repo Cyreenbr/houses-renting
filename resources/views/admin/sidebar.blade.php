@@ -71,7 +71,7 @@
           </li>
           <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
-          </li>
+        <!--    </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="index.html">
               <span class="menu-icon">
@@ -80,7 +80,7 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+        <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
@@ -96,14 +96,14 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+    <li class="nav-item menu-items">
             <a class="nav-link" href="pages/forms/basic_elements.html">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
               <span class="menu-title">Form Elements</span>
             </a>
-          </li>
+          </li>-->
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/ttMaisons')}}">
               <span class="menu-icon">
@@ -112,14 +112,14 @@
               <span class="menu-title">Maisons</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+         <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/charts/chartjs.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
               <span class="menu-title">Charts</span>
             </a>
-          </li>
+          </li>-->
           <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('/users')}}">
               <span class="menu-icon">
@@ -128,7 +128,7 @@
               <span class="menu-title">Users</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+        <!--  <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
@@ -153,7 +153,7 @@
               </span>
               <span class="menu-title">Documentation</span>
             </a>
-          </li>
+          </li>-->
         </ul>
       </nav>
         </nav>
